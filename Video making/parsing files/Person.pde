@@ -1,4 +1,5 @@
 class Person{
 String name;
-float[] values = new flaot[DAY_LEN]
+float[] values = new float[DAY_LEN]
+int[] ranks = new int[DAY_LEN]
 }
