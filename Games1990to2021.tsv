@@ -1,5 +1,4 @@
-Year	#1 Title	#1 Sold	#2 Title	#2 Sold
-1990 Q1	Frogger	7,548,356	Super Mario Bros. 3	4,904,538
+Year	#1 Game
 1990 Q2	Game
 1990 Q3	Game
 1990 Q4	Game
@@ -75,131 +74,55 @@ Year	#1 Title	#1 Sold	#2 Title	#2 Sold
 2008 Q2	Game
 2008 Q3	Game
 2008 Q4	Game
-1990 Q1	Game
- 1990 Q2	Game
- 1990 Q3	Game
- 1990 Q4	Game
- 1991 Q1	Game
- 1991 Q2	Game
- 1991 Q3	Game
- 1991 Q4	Game
- 1992 Q1	Game
- 1992 Q2	Game
- 1992 Q3	Game
- 1992 Q4	Game
- 1993 Q1	Game
- 1993 Q2	Game
- 1993 Q3	Game
- 1993 Q4	Game
- 1994 Q1	Game
- 1994 Q2	Game
- 1994 Q3	Game
- 1994 Q4	Game
- 1995 Q1	Game
- 1995 Q2	Game
- 1995 Q3	Game
- 1995 Q4	Game
- 1996 Q1	Game
- 1996 Q2	Game
- 1996 Q3	Game
- 1996 Q4	Game
- 1997 Q1	Game
- 1997 Q2	Game
- 1997 Q3	Game
- 1997 Q4	Game
- 1998 Q1	Game
- 1998 Q2	Game
- 1998 Q3	Game
- 1998 Q4	Game
- 1999 Q1	Game
- 1999 Q2	Game
- 1999 Q3	Game
- 1999 Q4	Game
- 2000 Q1	Game
- 2000 Q2	Game
- 2000 Q3	Game
- 2000 Q4	Game
- 2001 Q1	Game
- 2001 Q2	Game
- 2001 Q3	Game
- 2001 Q4	Game
- 2002 Q1	Game
- 2002 Q2	Game
- 2002 Q3	Game
- 2002 Q4	Game
- 2003 Q1	Game
- 2003 Q2	Game
- 2003 Q3	Game
- 2003 Q4	Game
- 2004 Q1	Game
- 2004 Q2	Game
- 2004 Q3	Game
- 2004 Q4	Game
- 2005 Q1	Game
- 2005 Q2	Game
- 2005 Q3	Game
- 2005 Q4	Game
- 2006 Q1	Game
- 2006 Q2	Game
- 2006 Q3	Game
- 2006 Q4	Game
- 2007 Q1	Game
- 2007 Q2	Game
- 2007 Q3	Game
- 2007 Q4	Game
- 2008 Q1	Game
- 2008 Q2	Game
- 2008 Q3	Game
- 2008 Q4	Game
- 2009 Q1	Game
- 2009 Q2	Game
- 2009 Q3	Game
- 2009 Q4	Game
- 2010 Q1	Game
- 2010 Q2	Game
- 2010 Q3	Game
- 2010 Q4	Game
- 2011 Q1	Game
- 2011 Q2	Game
- 2011 Q3	Game
- 2011 Q4	Game
- 2012 Q1	Game
- 2012 Q2	Game
- 2012 Q3	Game
- 2012 Q4	Game
- 2013 Q1	Game
- 2013 Q2	Game
- 2013 Q3	Game
- 2013 Q4	Game
- 2014 Q1	Game
- 2014 Q2	Game
- 2014 Q3	Game
- 2014 Q4	Game
- 2015 Q1	Game
- 2015 Q2	Game
- 2015 Q3	Game
- 2015 Q4	Game
- 2016 Q1	Game
- 2016 Q2	Game
- 2016 Q3	Game
- 2016 Q4	Game
- 2017 Q1	Game
- 2017 Q2	Game
- 2017 Q3	Game
- 2017 Q4	Game
- 2018 Q1	Game
- 2018 Q2	Game
- 2018 Q3	Game
- 2018 Q4	Game
- 2019 Q1	Game
- 2019 Q2	Game
- 2019 Q3	Game
- 2019 Q4	Game
- 2020 Q1	Game
- 2020 Q2	Game
- 2020 Q3	Game
- 2020 Q4	Game
- 2021 Q1	Game
- 2021 Q2	Game
- 2021 Q3	Game
- 2021 Q4	Game
+2009 Q1	Game
+2009 Q2	Game
+2009 Q3	Game
+2009 Q4	Game
+2010 Q1	Game
+2010 Q2	Game
+2010 Q3	Game
+2010 Q4	Game
+2011 Q1	Game
+2011 Q2	Game
+2011 Q3	Game
+2011 Q4	Game
+2012 Q1	Game
+2012 Q2	Game
+2012 Q3	Game
+2012 Q4	Game
+2013 Q1	Game
+2013 Q2	Game
+2013 Q3	Game
+2013 Q4	Game
+2014 Q1	Game
+2014 Q2	Game
+2014 Q3	Game
+2014 Q4	Game
+2015 Q1	Game
+2015 Q2	Game
+2015 Q3	Game
+2015 Q4	Game
+2016 Q1	Game
+2016 Q2	Game
+2016 Q3	Game
+2016 Q4	Game
+2017 Q1	Game
+2017 Q2	Game
+2017 Q3	Game
+2017 Q4	Game
+2018 Q1	Game
+2018 Q2	Game
+2018 Q3	Game
+2018 Q4	Game
+2019 Q1	Game
+2019 Q2	Game
+2019 Q3	Game
+2019 Q4	Game
+2020 Q1	Game
+2020 Q2	Game
+2020 Q3	Game
+2020 Q4	Game
+2021 Q1	Game
+2021 Q2	Game
+2021 Q3	Game
+2021 Q4	Game
