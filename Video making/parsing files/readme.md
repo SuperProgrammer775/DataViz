@@ -10,4 +10,4 @@ i am still working on this and will make it more extensive and less sophisticata
 
 
 
-abacaba on youtube has a video that taught me how to parse, you should check him out!
+abacaba on youtube has a video that taught me how to parse , you should check him out!
