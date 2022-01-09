@@ -6,7 +6,8 @@ i am still working on this and will make it more extensive and less sophisticata
 1. copypaste these files into processing (java wrapper)
 2. name the second file person
 3. save the files into a folder with your dataset
-4. start coding!
+4. adjust a few setting to your liking
+5. start coding!
 
 
 
