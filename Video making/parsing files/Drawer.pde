@@ -2,7 +2,6 @@ int DAY_LEN ;
 int PEOPLE_COUNT;
 String[] textFile;
 Person[] people;
-
 void setup(){
   textFile = loadStrings("data.tsv");
  String[] parts = textFile[0].split("\t");
