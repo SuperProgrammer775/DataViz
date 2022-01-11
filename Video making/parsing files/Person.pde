@@ -9,5 +9,6 @@ for(int i = 0; i < DAY_LEN i++){
 values[i] = 0;
 ranks[i] = -1;
 }
+c = color(random(50,200),random(50,200),random(50,200));
 }
 }
