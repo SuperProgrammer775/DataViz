@@ -2,6 +2,7 @@ int DAY_LEN ;
 int PEOPLE_COUNT;
 String[] textFile;
 Person[] people;
+int TOP_VISIBLE = 14;
 void setup(){
   textFile = loadStrings("data.tsv");
  String[] parts = textFile[0].split("\t");
@@ -19,7 +20,11 @@ for(int line = 0; line < DAY_LEN; line++){
 
   }
 }
- println(people[6].values[39]);
+for(int d = 0; d < DAY_LEN; d++){
+  boolean[] taken = new boolean[PEOPLE_COUNT];
+  for(int p = 0; p < PEOPLE_COUNT; p++)
+  
+}
 }
 void draw(){
 }
