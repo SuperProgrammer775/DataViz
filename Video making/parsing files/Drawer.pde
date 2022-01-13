@@ -12,19 +12,34 @@ void setup(){
  for(int i = 0; i < PEOPLE_COUNT; i++){
    people[i] = new Person(parts[i+1]);
    
- }
-for(int line = 0; line < DAY_LEN; line++){
-  String[] dataParts = textFile[line+1].split("\t");
-  for(int p = 0; p < PEOPLE_COUNT; p++){
- people[p].values[line] = Float.parseFloat(dataParts[p+1]);
 
   }
 }
-for(int d = 0; d < DAY_LEN; d++){
-  boolean[] taken = new boolean[PEOPLE_COUNT];
-  for(int p = 0; p < PEOPLE_COUNT; p++)
-  
-}
-}
 void draw(){
+}
+
+void getRankings(){
+  for(int d = 0; d < 1; d++){
+  boolean[] taken = new boolean[PEOPLE_COUNT];
+  for(int p = 0; p < PEOPLE_COUNT; p++){
+  taken[p] = false;
+  }
+  for(int spot = 0; spot < TOP_VISIBLE; spot++){
+ float record =  -1;
+  int holder = -1;
+   for(int p = 0; p < PEOPLE_COUNT; p++){
+     if(!taken[p]){
+  taken[p] = false;
+  float val = people[p].values[d];
+  if(val > record){
+    record = val; 
+    holder = p;
+  }
+     }
+}
+ people[holder].ranks[d] = spot;
+ taken[holder] = true;
+ println(people[holder].name);
+  }
+}
 }
