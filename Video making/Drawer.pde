@@ -2,7 +2,8 @@ int DAY_LEN ;
 int PEOPLE_COUNT;
 String[] textFile;
 Person[] people;
-int TOP_VISIBLE = 14;
+int TOP_VISIBLE = 13;
+
 void setup(){
   textFile = loadStrings("data.tsv");
  String[] parts = textFile[0].split("\t");
@@ -11,9 +12,15 @@ void setup(){
  people = new Person[PEOPLE_COUNT];
  for(int i = 0; i < PEOPLE_COUNT; i++){
    people[i] = new Person(parts[i+1]);
-   
-
+ }
+ for(int d = 0; d < DAY_LEN; d++){
+   String[] dataParts = textFile[d+1].split("\t");
+   for(int p = 0; p < PEOPLE_COUNT; p++){
+   people[p].values[d] = Float.parseFloat(dataParts[p+1]);
+ }
   }
+  getRankings();
+  
 }
 void draw(){
 }
