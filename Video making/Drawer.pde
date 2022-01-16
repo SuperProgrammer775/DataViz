@@ -5,6 +5,15 @@ Person[] people;
 int TOP_VISIBLE = 13;
 float[] maxes;
 float[] scales;
+
+float X_MIN = 100;
+float X_MAX = 1600;
+float Y_MIN = 300;
+float Y_MAX = 1000;
+float X_W = X_MAX-X_MIN;
+float Y_H = Y_MAX-Y_MIN;
+
+
 void setup(){
   textFile = loadStrings("data.tsv");
  String[] parts = textFile[0].split("\t");
@@ -27,6 +36,9 @@ void setup(){
    for(int p = 0; p < PEOPLE_COUNT; p++){
      float val = Float.parseFloat(dataParts[p+1]);
    people[p].values[d] = val;
+   if(val > maxes[d]){
+     maxes[d] = val;
+   }
  }
   }
   getRankings();
@@ -59,4 +71,8 @@ void getRankings(){
  println(people[holder].name);
   }
 }
+}
+float valueToX(){
+}
+float valueToY(){
 }
