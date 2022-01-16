@@ -74,5 +74,7 @@ void getRankings(){
 }
 float valueToX(){
 }
-float valueToY(){
+float valueToY(float rank){
+  float y = Y_MIN+rank*(Y_H/TOP_VISIBLE);
+  return y;
 }
