@@ -15,7 +15,7 @@ float currentScale =  -1;
 
 int frames = 0;
 float currentDay = 0;
-float FRAMES_PER_DAY =  2.8
+float FRAMES_PER_DAY =  2.8;
 
 void setup(){
   textFile = loadStrings("data.tsv");
@@ -27,7 +27,6 @@ void setup(){
  for(int d = 0; d < DAY_LEN; d++){
    maxes[d] = 0;
  }
- 
  people = new Person[PEOPLE_COUNT];
  for(int i = 0; i < PEOPLE_COUNT; i++){
    people[i] = new Person(parts[i+1]);
@@ -43,15 +42,27 @@ void setup(){
  }
   }
   getRankings();
+  size(1920,1080);
 }
 void draw(){
   currentDay = frames/FRAMES_PER_DAY;
  currentScale = getXScale(currentDay);
+ drawBackground();
+ drawBars();
   
   
   frames++;
 }
-
+void drawBackground(){
+  background(0);
+  
+}
+void drawBars(){
+  for(int p = 0; p < PEOPLE_COUNT; p++){
+    float x = valueToX(val);
+  }
+  
+}
 void getRankings(){
   for(int d = 0; d < 1; d++){
   boolean[] taken = new boolean[PEOPLE_COUNT];
@@ -81,13 +92,13 @@ float stepIndex(float[] a, float index){
  return a[(int)index];
 }
 float linIndex(float[] a, float index){
-  int Indexint = (int)Index;
+  int indexInt = (int)index;
   float indexRem = index%1.0;
   float beforeVal = a[indexInt+1];
   float afterVal = a[indexInt+1];
  return lerp(beforeVal,afterVal,indexRem);
 }
-float WAindex(float[] a, float index, float WINDOW_WIDTH){
+float WAIndex(float[] a, float index, float WINDOW_WIDTH){
     int startIndex = max(0,ceil(index-WINDOW_WIDTH));
   int endIndex = min(DAY_LEN-1,floor(index+WINDOW_WIDTH));
   float counter = 0;
@@ -102,7 +113,7 @@ float finalResult = summer/counter;
 return finalResult;
 }
 float getXScale(float d){
- return WAIndex(maxes,d,14)*1.2;
+  return WAIndex(maxes,d,14)*1.2;
 }
 float valueToX(float val){
  return X_MIN+X_W*val/currentScale;
