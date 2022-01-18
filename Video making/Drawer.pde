@@ -4,7 +4,6 @@ String[] textFile;
 Person[] people;
 int TOP_VISIBLE = 13;
 float[] maxes;
-float[] scales;
 
 float X_MIN = 100;
 float X_MAX = 1600;
@@ -12,7 +11,7 @@ float Y_MIN = 300;
 float Y_MAX = 1000;
 float X_W = X_MAX-X_MIN;
 float Y_H = Y_MAX-Y_MIN;
-
+float X_SCALE =  -1;
 
 void setup(){
   textFile = loadStrings("data.tsv");
@@ -21,10 +20,8 @@ void setup(){
  PEOPLE_COUNT = parts.length-1;
  
  maxes = new float[DAY_LEN];
- scales = new float[DAY_LEN];
  for(int d = 0; d < DAY_LEN; d++){
    maxes[d] = 0;
-   scales[d] = 0;
  }
  
  people = new Person[PEOPLE_COUNT];
@@ -42,9 +39,9 @@ void setup(){
  }
   }
   getRankings();
-  
 }
 void draw(){
+  XScale = getXScale(currentDay);
 }
 
 void getRankings(){
@@ -72,7 +69,35 @@ void getRankings(){
   }
 }
 }
-float valueToX(){
+float stepIndex(float[] a, float index){
+ return a[(int)index];
+}
+float linIndex(float[] a, float index){
+  int Indexint = (int)Index;
+  float indexRem = index%1.0;
+  float beforeVal = a[indexInt+1];
+  float afterVal = a[indexInt+1];
+ return lerp(beforeVal,afterVal,indexRem);
+}
+float WAindex(float[] a, float index, float WINDOW_WIDTH){
+    int startIndex = max(0,ceil(index-WINDOW_WIDTH));
+  int endIndex = min(DAY_LEN-1,floor(index+WINDOW_WIDTH));
+  float counter = 0;
+  float summer = 0;
+  for(int d = startIndex; d <= endIndex; d++){
+    float val = a[d];
+    float weight = 0.5+0.5*cos((d-index)/WINDOW_WIDTH*PI);
+    counter += weight;
+    summer += val*weight;
+}
+float finalResult = summer/counter;
+return finalResult;
+}
+float getXScale(float d){
+ return WAIndex(maxes,d,14)*1.2;
+}
+float valueToX(float val){
+ return X_MIN+X_W*val/X_SCALE;
 }
 float valueToY(float rank){
   float y = Y_MIN+rank*(Y_H/TOP_VISIBLE);
