@@ -11,7 +11,11 @@ float Y_MIN = 300;
 float Y_MAX = 1000;
 float X_W = X_MAX-X_MIN;
 float Y_H = Y_MAX-Y_MIN;
-float X_SCALE =  -1;
+float currentScale =  -1;
+
+int frames = 0;
+float currentDay = 0;
+float FRAMES_PER_DAY =  2.8
 
 void setup(){
   textFile = loadStrings("data.tsv");
@@ -41,7 +45,11 @@ void setup(){
   getRankings();
 }
 void draw(){
-  XScale = getXScale(currentDay);
+  currentDay = frames/FRAMES_PER_DAY;
+ currentScale = getXScale(currentDay);
+  
+  
+  frames++;
 }
 
 void getRankings(){
@@ -97,7 +105,7 @@ float getXScale(float d){
  return WAIndex(maxes,d,14)*1.2;
 }
 float valueToX(float val){
- return X_MIN+X_W*val/X_SCALE;
+ return X_MIN+X_W*val/currentScale;
 }
 float valueToY(float rank){
   float y = Y_MIN+rank*(Y_H/TOP_VISIBLE);
