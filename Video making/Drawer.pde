@@ -2,7 +2,7 @@ int DAY_LEN ;
 int PEOPLE_COUNT;
 String[] textFile;
 Person[] people;
-int TOP_VISIBLE = 13;
+int TOP_VISIBLE = 10;
 float[] maxes;
 
 float X_MIN = 100;
@@ -11,11 +11,18 @@ float Y_MIN = 300;
 float Y_MAX = 1000;
 float X_W = X_MAX-X_MIN;
 float Y_H = Y_MAX-Y_MIN;
+float BAR_PROPORTION = 0.9;
+
+
 float currentScale =  -1;
+
+
+
 
 int frames = 0;
 float currentDay = 0;
 float FRAMES_PER_DAY =  2.8;
+float BAR_HEIGHT;
 
 void setup(){
   textFile = loadStrings("data.tsv");
@@ -42,6 +49,7 @@ void setup(){
  }
   }
   getRankings();
+  BAR_HEIGHT =  (rankToY(1)-rankToy(0))*BAR_PROPORTION;
   size(1920,1080);
 }
 void draw(){
@@ -59,9 +67,13 @@ void drawBackground(){
 }
 void drawBars(){
   for(int p = 0; p < PEOPLE_COUNT; p++){
+    Person pe =  people[p];
+    float val = linIndex(pe.values,currentDay);
     float x = valueToX(val);
-  }
-  
+ float rank = WAIndex(pe.ranks, currentDay, 5);
+    fill(255);
+    rect X_MIN,y,x-X_MIN,BAR_HEIGHT);
+  }  
 }
 void getRankings(){
   for(int d = 0; d < 1; d++){
@@ -113,7 +125,7 @@ float finalResult = summer/counter;
 return finalResult;
 }
 float getXScale(float d){
-  return WAIndex(maxes,d,14)*1.2;
+  return WAIndex(maxes,d,5)*1.2;
 }
 float valueToX(float val){
  return X_MIN+X_W*val/currentScale;
