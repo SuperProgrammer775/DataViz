@@ -11,7 +11,7 @@ contract DataViz {
     string public symbol;
     uint8 public decimals;
     uint256 public totalSupply;
-    uint256 public initialSupply = 0.015 ether;
+    uint256 public initialSupply = 0.019 ether;
 
     constructor() {
         totalSupply = 8888;
